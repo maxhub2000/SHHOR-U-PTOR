@@ -1,0 +1,59 @@
+
+/* tabular_data- the CSS file that is responsible for the design of the elements in HTML  */
+
+ 
+/*-------------------------------------------------------------------------------------------------
+								show_picture selectors
+-------------------------------------------------------------------------------------------------*/
+
+table.center {
+	/* responsible for the design of the table. removes the borders in the table
+	and makes the table be at the center of the web page */
+	
+	border-collapse: collapse;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+
+td.black {
+	/* colors a cell in the table in black and makes the cell a square because the width and height are equall */
+	
+	background: black ;  
+	width: 50px;
+	height: 50px;
+}
+
+td.white {
+	/* colors a cell in the table in black and makes the cell a square because the width and height are equall */
+
+	background: white ;  
+	width:50px;
+	height: 50px;
+}
+
+/*-------------------------------------------------------------------------------------------------
+								main_page selectors
+-------------------------------------------------------------------------------------------------*/
+
+
+h1{
+	/*alligns the text to the center */
+	text-align: center;
+}
+
+p{
+	/*alligns the text to the center  and makes it bigger*/
+	text-align: center;
+	font-size: x-large;
+}
+
+p.underline{
+	/* underlines the text */
+	text-decoration: underline;
+}
+
+

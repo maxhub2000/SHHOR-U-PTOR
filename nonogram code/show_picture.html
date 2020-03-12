@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- this file creates the pictures based on the input of size and pixs -->
+<html>
+	<head>
+		<!-- a link to the CSS file named tabular_data that designs the html elements in this file.  -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/tabular_data.css">
+	</head>
+	<body>
+		
+		<!-- the table that helps create the picture -->
+		<table class="center">
+				
+				<tr>
+					<!-- for loop that iterate over all the indices of the table(recieved from the input) -->
+					{%for i in range(rows*columns) %}
+					<!-- checks if the algorithm should go down a line, and he does when the remainder of the inex after
+					dividing by the number of columns is zero, using the remeinder_of_columns function from the python file to do that -->
+					{% if remeinder_of_columns(i) %}
+					<tr />
+					{% endif %}
+					
+					<!-- iterate over the i'st row and checks in each cell wether its 1 or 0. if its 1 colors the cell in black, if not colors
+					it in white(or doesnt colors it)  using the css file-->
+					{% for j in list_of_pixs[i] %}
+						{%if j=="1" %}
+							<td class="black"/>	
+						{% else %}
+							<td class="white"/> 
+						{% endif %}
+					{% endfor %}
+					{% endfor %}
+				</tr>
+				
+		</table>
+
+	</body>
+</html>
+
